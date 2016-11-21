@@ -1,5 +1,5 @@
 body {
-	background-color: silver;
+	background-image: url("images/wallpaper-abyss-explore-the-collection-bleach-anime-bleach-80409-gtpSUk-clipart.jpg");
 	font-family: arial;
 }
 
@@ -7,7 +7,7 @@ main {
 	position: relative;
 	width: 600px;
 	height: 450px;
-	background-image: url("images/metal.png");
+	background-image: url("images/black-metal2.jpeg");
 	margin: 100px auto;
 	border: solid black 2px;
 }
