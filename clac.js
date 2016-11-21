@@ -1,11 +1,11 @@
-var numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ".", "c","+", "-", "x", "÷"];
+var numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ".", "c","+", "-", "x", "÷", "c"];
 var operators = ['+', '-', 'x', '÷'];
 var decimalAdded = false;
 
 console.log(numbers);
 numbers[0] = document.getElementById('zero');
 console.log(numbers[0].value);
-numbers[0].setAttribute("onClick", "");
+numbers[0].setAttribute("onClick", "javascript:cals(buttonvalue());");
 
 numbers[1] = document.getElementById('one');
 console.log(numbers[1].value);
@@ -49,4 +49,5 @@ console.log(numbers[13].value);
 numbers[14] = document.getElementById('dot');
 console.log(numbers[14].value);
 
-
+numbers[15] = document.getElementById('cbutton');
+console.log(numbers[15].value);
