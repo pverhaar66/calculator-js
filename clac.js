@@ -1,11 +1,11 @@
-var numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ".", "c","+", "-", "x", "÷", "c"];
+var numbers = [];
 var operators = ['+', '-', 'x', '÷'];
 var decimalAdded = false;
 
 console.log(numbers);
-numbers[0] = document.getElementById('zero');
-console.log(numbers[0].value);
-numbers[0].setAttribute("onClick", "javascript:functie()");
+numbers[0] = document.getElementById('zero')	
+console.log(document.getElementById('zero').value);
+numbers[0].setAttribute("onclick", "javascript:number(0)");
 
 numbers[1] = document.getElementById('one');
 console.log(numbers[1].value);
@@ -51,21 +51,27 @@ console.log(numbers[14].value);
 
 numbers[15] = document.getElementById('cbutton');
 console.log(numbers[15].value);
-numbers[15].setAttribute("onClick", "javascript:functie(c)");
+numbers[15].setAttribute("onClick", "javascript:functie('c')");
 
 function functie(c){
-var c = c || null;
+	console.log(c);
 
-var input = document.getElementById('screen');
+	var input = document.getElementById('screen');
+	input.innerHTML = '';
 
-if (c == 'c') {
- 
- input.innerhtml = " "
 
-}else{ 
-
-numbers[].innerhtml "00"
+	var input = document.getElementById('screen');
+	input.innerHTML = '';
 
 }
 
+function number (text) {
+	console.log(text);
+
+	.innerHTML
+
+
+
+
+}
 
