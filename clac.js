@@ -5,7 +5,7 @@ var decimalAdded = false;
 console.log(numbers);
 numbers[0] = document.getElementById('zero');
 console.log(numbers[0].value);
-numbers[0].setAttribute("onClick", "javascript:cals(buttonvalue());");
+numbers[0].setAttribute("onClick", "javascript:functie()");
 
 numbers[1] = document.getElementById('one');
 console.log(numbers[1].value);
@@ -51,3 +51,21 @@ console.log(numbers[14].value);
 
 numbers[15] = document.getElementById('cbutton');
 console.log(numbers[15].value);
+numbers[15].setAttribute("onClick", "javascript:functie(c)");
+
+function functie(c){
+var c = c || null;
+
+var input = document.getElementById('screen');
+
+if (c == 'c') {
+ 
+ input.innerhtml = " "
+
+}else{ 
+
+numbers[].innerhtml "00"
+
+}
+
+
