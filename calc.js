@@ -69,40 +69,45 @@ numbers[15].setAttribute("onClick", "javascript:number(15)");
 
 numbers[16] = document.getElementById('equals');
 console.log(numbers[16].value);
-numbers[16].setAttribute("onClick", "javascript:number(16)");
-
-
-
+numbers[16].setAttribute("onClick", "javascript:result");
 
 function functie(c){
 	console.log(c);
 
 	var input = document.getElementById('screen');
-	input.innerHTML = '';	
+	input.innerHTML = '';
+
 }
-
-
-
 
 function number (index) {
 	console.log(index);
-	var limit
 	var input = document.getElementById('screen');
-	input.innerHTML = numbers[index].value;
-
-	
-	
-
-	for (var i = 1 ; i < index; i++) {
-		input.innerHTML = ;
-	
-		limit = input.length;
-
-	}if (limit > 16) {
-
-		input.innerHTML = ' not enough space';
-	}
+	input.innerHTML += numbers[index].value;
 
 
+}
+
+function result() {
+	var	evalu = eval(document.getElementById('screen').value)
+
+	document.getElementById('screen').value = evalu;
+
+
+}
+
+function divide() {
+
+}
+
+function multiply() {
+
+}
+
+function add() {
+
+
+}
+
+function subtract() {
 
 }
