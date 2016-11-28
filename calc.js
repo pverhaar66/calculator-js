@@ -1,6 +1,7 @@
 var numbers = [];
-/*var operators = ['+', '-', 'x', '÷'];*/
 var decimalAdded = false;
+var input = document.getElementById('screen');
+
 
 console.log(numbers);
 numbers[0] = document.getElementById('zero')	
@@ -69,45 +70,73 @@ numbers[15].setAttribute("onClick", "javascript:number(15)");
 
 numbers[16] = document.getElementById('equals');
 console.log(numbers[16].value);
-numbers[16].setAttribute("onClick", "javascript:result");
+numbers[16].setAttribute("onClick", "javascript:result()");
+
+
 
 function functie(c){
 	console.log(c);
 
-	var input = document.getElementById('screen');
 	input.innerHTML = '';
 
 }
 
 function number (index) {
 	console.log(index);
-	var input = document.getElementById('screen');
 	input.innerHTML += numbers[index].value;
 
-
 }
+
 
 function result() {
-	var	evalu = eval(document.getElementById('screen').value)
+	console.log('Accel Syncro-!!');
+    
+	var plus = input.value.indexOf("plus");
+	var minus = input.value.indexOf("minus");
+	var multiply = input.value.indexOf("multiply");
+	var divide = input.value.indexOf("divide");
+	var limit = input.length;
 
-	document.getElementById('screen').value = evalu;
+	if (plus>0) {
+	var nrs  = input.value.split("+");
+	input.value = number(nrs[0]) + number(nrs[1]);
+
+	
+
+	if (minus>0) {
+
+	var nrs  = input.value.split("-");
+	input.value = number(nrs[0]) - number(nrs[1]);	
 
 
-}
+	if (multiply>0) {
+	var nrs  = input.value.split("*");
+	input.value = number(nrs[0]) * number(nrs[1]);
 
-function divide() {
+		
+	if (divide>0) {
+	var nrs  = input.value.split("/");
+	input.value = number(nrs[0]) / number(nrs[1]);
+			
+						
+	if (limit > 16 ) {
 
-}
-
-function multiply() {
-
-}
-
-function add() {
+	console.log(' there is no more space !!');
+	alert(' there is no more space !!');
+		}else{	
+		console.log('what u u doin mate ?');
+								}
 
 
-}
+							}
 
-function subtract() {
+
+						}
+		
+				}
+	
+		}
+
+
 
 }
