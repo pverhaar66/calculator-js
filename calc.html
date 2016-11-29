@@ -7,25 +7,28 @@
 </head>
 <body>
 	<main>
-		<section id="cbutton"><button value="c"> C </button> </section>
-		<section value="" id="screen"></section>
+		<section id="cbutton"><button onclick="refresh()"> C </button> </section>
+		<section id="screen" ></section>
 		<section id="buttons">
-		<button value="7" id="seven">7</button>
-		<button value="8" id="eight">8</button>
-		<button value="9" id="nine">9</button>
-		<button value="+" id="plus">+</button>
-		<button value="4" id="four">4</button>
-		<button value="5" id="five">5</button>
-		<button value="6" id="six">6</button>
-		<button value="-" id="minus">-</button>
-		<button value="1" id="one">1</button>
-		<button value="2" id="two">2</button>
-		<button value="3" id="three">3</button>
-		<button value="/" id="divide">/</button>
-		<button value="." id="dot">.</button>
-		<button value="0" id="zero">0</button>
-		<button value="=" id="equals">=</button>
-		<button value="*" id="multiply">*</button>
+		<button onclick="number('7')">7</button>
+		<button onclick="number('8')">8</button>
+		<button onclick="number('9')">9</button>
+		<button class="operators" onclick="addopp('+')" >+</button>
+
+		<button onclick="number('4')">4</button>
+		<button onclick="number('5')">5</button>
+		<button onclick="number('6')">6</button>
+		<button class="operators" onclick="addopp('-')">-</button>
+
+		<button onclick="number('1')">1</button>
+		<button onclick="number('2')">2</button>
+		<button onclick="number('3')">3</button>
+		<button class="operators" onclick="addopp('/')">/</button>
+
+		<button>.</button>
+		<button onclick="number('0')">0</button>
+		<button class="operators" onclick="calculate()">=</button>
+		<button class="operators" onclick="addopp('x')">*</button>
 		</section>
 
 
