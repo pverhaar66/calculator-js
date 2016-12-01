@@ -1,10 +1,12 @@
 var input = document.getElementById('screen');
-input.value = 0;
 
-// global scope  array shortterm
+
+
+
+// global scope  array shortterm//
 var shortterm = [null,null,null,null,1,1];
 
-
+// resets the screen to nada/empty//
 function refresh(number){
 	console.log();
 
@@ -23,6 +25,7 @@ function goal(number) {
 		if(shortterm[0] == null){
 			shortterm[0] = number;
 
+
 		}else{
 			// if shortterm [0] needs more then 1 number in it (this only works if shorttem [1] is still at nill)//
 			shortterm[0] += number;
@@ -35,9 +38,34 @@ function goal(number) {
 		}else 
 			shortterm[2] += number;
 
-	}
+	}	
+
 
 }
+
+function dot(dot)
+{	
+	input.innerHTML += dot;
+	var dot = "."
+	//if shortterm[1] has no value it adds the dot to shortterm [0]'s value
+	if (shortterm[1] == null){
+		//shortterm[4] changes value to make sure no second dot is placed
+		if (shortterm[4] == 1) {								
+			shortterm[0] += dot;
+			
+			shortterm[4] = null;
+		}
+
+	} else {
+		//shortterm[5] changes value to make sure no second dot is placed
+		if (shortterm[5] == 1) {
+			
+			shortterm[2] += dot;
+			shortterm[5] = null;
+		}
+	}
+}
+
 
 
 
@@ -57,12 +85,17 @@ input.innerHTML += operator;
 
 				// if a operator is added when shortterm[3] is already filled it calculates it and changes shortterm[3] to [0] and adds the operator//
 				calculate();
+				input.innerHTML += operator;
 				shortterm[0] = shortterm[3];
 				shortterm[2] = null;
 				shortterm[1] = null;
 				shortterm[1] = operator;
 	}
 }
+
+
+
+
 function calculate(number){
 	console.log('SYNCRO SUMMON, ACCEL SYNCHRO~!')
 	if (shortterm[2] == null){
@@ -89,7 +122,7 @@ function calculate(number){
     	input.innerHTML = shortterm[3];
         break;
     default:
-    	console.log(" Error: No operator");
+    	console.log(" where's ya operator?");
         break;
 
 
