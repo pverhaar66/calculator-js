@@ -16,6 +16,8 @@ function refresh(number){
 
 }
 
+
+
 function goal(number) {
 	input.innerHTML += number;
 
